@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "diamondrails:diamond_rail"
+  },
+  "result": {
+    "item": "diamondrails:netherite_rail"
+  }
+}

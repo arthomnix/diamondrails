@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "diamondrails",
+  "version": "${version}",
+  "name": "Diamond Rails",
+  "description": "Adds much faster powered rail variations",
+  "authors": [
+    "arthomnix"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/diamondrails/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.arthomnix.diamondrails.DiamondRails"
+    ],
+    "client": [
+      "dev.arthomnix.diamondrails.DiamondRailsClient"
+    ]
+  },
+  "mixins": [
+    "diamondrails.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}

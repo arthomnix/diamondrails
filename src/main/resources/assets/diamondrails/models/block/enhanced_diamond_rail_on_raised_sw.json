@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_rail_raised_sw",
+  "textures": {
+    "rail": "diamondrails:block/enhanced_diamond_rail_on"
+  }
+}

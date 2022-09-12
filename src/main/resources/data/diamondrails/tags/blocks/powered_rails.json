@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:powered_rail",
+    "diamondrails:diamond_rail",
+    "diamondrails:enhanced_diamond_rail",
+    "diamondrails:netherite_rail"
+  ]
+}
