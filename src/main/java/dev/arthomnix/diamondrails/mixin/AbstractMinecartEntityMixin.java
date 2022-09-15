@@ -10,7 +10,6 @@ import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
@@ -46,12 +45,8 @@ public abstract class AbstractMinecartEntityMixin extends Entity {
         return Math.min(8.0, b);
     }
 
-    /**
-     * @author arthomnix
-     * @reason Method is so small that using a cleaner mixin type would be impractical
-    */
-    @Overwrite
-    public double getMaxSpeed() {
+    @Redirect(method = "moveOnRail", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/vehicle/AbstractMinecartEntity;getMaxSpeed()D"))
+    public double increaseMaxSpeedOnNewRails(AbstractMinecartEntity instance) {
         double speed = maxSpeed;
         BlockState blockState = this.world.getBlockState(this.getBlockPos());
         if (blockState.isOf(Blocks.POWERED_RAIL)) {
