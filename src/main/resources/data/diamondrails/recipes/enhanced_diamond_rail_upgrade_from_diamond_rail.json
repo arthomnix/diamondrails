@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:chorus_fruit"
+  },
+  "base": {
+    "item": "diamondrails:diamond_rail"
+  },
+  "result": {
+    "item": "diamondrails:enhanced_diamond_rail"
+  }
+}
